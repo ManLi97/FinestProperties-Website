@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finest Properties Mallorca</title>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header" id="site-header">
+        <div class="container header__inner">
+            <!-- Logo -->
+            <a href="/" class="header__logo">
+                <img src="/Media/logo-desktop.png" alt="Finest Properties Mallorca"
+                    style="height: 36px; width: auto; display: block;">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="header__nav desktop-only">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Startseite</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="nav-link">Immobilien <span class="caret">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Villa & Finca kaufen</a></li>
+                            <li><a href="#">Wohnung kaufen</a></li>
+                            <li><a href="#">Mieten</a></li>
+                            <li><a href="#">Grundstück</a></li>
+                            <li><a href="#">Immobilien Palma de Mallorca</a></li>
+                            <li><a href="#">Gewerbeimmobilien</a></li>
+                            <li><a href="#">Hotels</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Verkaufen</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="nav-link">Service <span class="caret">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Über uns</a></li>
+                            <li><a href="#">VIP Mallorca Erlebnis</a></li>
+                            <li><a href="#">Leben auf Mallorca</a></li>
+                            <li><a href="#">Mallorca Guide</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions desktop-only">
+                <div class="lang-switch">
+                    <span class="active">DE</span> | <span>EN</span> | <span>ES</span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle mobile-only" id="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav" id="mobile-nav">
+            <!-- Will be populated by JS or simple clone for now -->
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <!-- Background Video -->
+            <div class="hero__bg">
+                <div class="hero__overlay"></div>
+                <video autoplay loop muted playsinline class="hero__video"
+                    poster="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1920">
+                    <source src="/Media/hero-video.mp4" type="video/mp4">
+                    <!-- Fallback background if video missing -->
+                </video>
+            </div>
+
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title">Luxusimmobilien auf Mallorca<br>für höchste Ansprüche</h1>
+                    <p class="hero__subtitle">Finden Sie Ihr Traumhaus oder verkaufen Sie mit unseren Experten.</p>
+
+                    <div class="hero__ctas">
+                        <a href="#finder" class="btn btn-primary">Immobilien finden</a>
+                        <a href="/verkaufen.html" class="btn btn-secondary hero-btn-secondary">Immobilie verkaufen</a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="hero__badges">
+                        <div class="badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">Geprüfte Immobilien</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">Diskreter Verkauf</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">✓</span>
+                            <span class="badge-text">Lokale Expertise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROPERTY FINDER -->
+        <section class="finder-section" id="finder">
+            <div class="container">
+                <div class="finder-card">
+                    <form class="finder-form">
+                        <div class="filter-group">
+                            <label>Immobilientyp</label>
+                            <select>
+                                <option value="">Alle Typen</option>
+                                <option value="villa">Villa & Finca</option>
+                                <option value="wohnung">Wohnung</option>
+                                <option value="grundstueck">Grundstück</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Region/Ort</label>
+                            <select>
+                                <option value="">Alle Orte</option>
+                                <option value="palma">Palma de Mallorca</option>
+                                <option value="andratx">Port d'Andratx</option>
+                                <option value="santa-ponsa">Santa Ponsa</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Preisklasse</label>
+                            <select>
+                                <option value="">Beliebig</option>
+                                <option value="1M">Bis 1.000.000 €</option>
+                                <option value="1M-3M">1.000.000 € - 3.000.000 €</option>
+                                <option value="3M+">Ab 3.000.000 €</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Referenznummer</label>
+                            <input type="text" placeholder="Beispiel: REF-1234">
+                        </div>
+
+                        <div class="filter-group filter-submit">
+                            <button type="button" class="btn btn-primary w-100">Suchen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST / ABOUT SECTION -->
+        <section class="section about-section">
+            <div class="container about-inner">
+                <div class="about-image">
+                    <img src="/Media/markus_redlich_finestpropertiesmallorca.jpg"
+                        alt="Markus Redlich - Ihr Immobilienexperte"
+                        style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); display: block;">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Ihr Immobilienexperte auf Mallorca</h2>
+                    <p class="section-text">Mit über 15 Jahren Erfahrung auf dem mallorquinischen Immobilienmarkt finden
+                        wir nicht nur ein Haus, sondern Ihr neues Zuhause. Diskretion, Expertise und ein exklusives
+                        Netzwerk sind unser Versprechen an Sie.</p>
+                    <ul class="about-bullets">
+                        <li>✓ Fundierte Marktkenntnis in Top-Lagen</li>
+                        <li>✓ Begleitung vom Erstgespräch bis zum Notar</li>
+                        <li>✓ Einzigartiger After-Sales Service</li>
+                    </ul>
+                    <div class="about-actions mt-4">
+                        <a href="tel:+34123456789" class="btn btn-primary">Jetzt anrufen</a>
+                        <a href="https://wa.me/34123456789" class="btn btn-secondary whatsapp-btn"
+                            style="border-color: #25D366; color: #25D366;">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST PROPERTIES -->
+        <section class="section bg-light properties-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Neue Immobilienangebote</h2>
+                    <a href="/immobilien.html" class="link-arrow">Alle ansehen &rarr;</a>
+                </div>
+
+                <div class="property-grid">
+                    <!-- Property Card 1 -->
+                    <a href="/detail.html" class="property-card">
+                        <div class="property-card__image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800"
+                                alt="Villa"
+                                style="aspect-ratio: 16/10; object-fit: cover; width: 100%; display: block;">
+                            <div class="property-badge">Neu</div>
+                            <div class="property-price">4.500.000 €</div>
+                        </div>
+                        <div class="property-card__content">
+                            <p class="property-location">Port d'Andratx</p>
+                            <h3 class="property-title">Moderne Luxusvilla mit Meerblick</h3>
+                            <div class="property-facts">
+                                <span>4 Schlafz.</span> • <span>4 Bäder</span> • <span>450 m²</span>
+                            </div>
+                            <p class="property-ref">REF-1001</p>
+                        </div>
+                    </a>
+
+                    <!-- Property Card 2 -->
+                    <a href="/detail.html" class="property-card">
+                        <div class="property-card__image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
+                                alt="Penthouse"
+                                style="aspect-ratio: 16/10; object-fit: cover; width: 100%; display: block;">
+                            <div class="property-price">2.100.000 €</div>
+                        </div>
+                        <div class="property-card__content">
+                            <p class="property-location">Santa Ponsa</p>
+                            <h3 class="property-title">Elegantes Penthouse am Golfplatz</h3>
+                            <div class="property-facts">
+                                <span>3 Schlafz.</span> • <span>2 Bäder</span> • <span>180 m²</span>
+                            </div>
+                            <p class="property-ref">REF-1002</p>
+                        </div>
+                    </a>
+
+                    <!-- Property Card 3 -->
+                    <a href="/detail.html" class="property-card">
+                        <div class="property-card__image">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800"
+                                alt="Finca"
+                                style="aspect-ratio: 16/10; object-fit: cover; width: 100%; display: block;">
+                            <div class="property-price">1.850.000 €</div>
+                        </div>
+                        <div class="property-card__content">
+                            <p class="property-location">Palma de Mallorca (Son Vida)</p>
+                            <h3 class="property-title">Renovierte historische Finca</h3>
+                            <div class="property-facts">
+                                <span>5 Schlafz.</span> • <span>4 Bäder</span> • <span>320 m²</span>
+                            </div>
+                            <p class="property-ref">REF-1003</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES (4 cards) -->
+        <section class="section services-section">
+            <div class="container">
+                <div class="section-header text-center" style="justify-content: center; margin-bottom: 3rem;">
+                    <h2 class="section-title">Unsere Services</h2>
+                </div>
+
+                <div class="services-grid">
+                    <a href="/service/kauf.html" class="service-card">
+                        <div class="service-icon">✦</div>
+                        <h3>Immobilienkauf</h3>
+                        <p>Wir finden das perfekte Zuhause oder die ideale Investition für Sie auf Mallorca.</p>
+                    </a>
+                    <a href="/verkaufen.html" class="service-card">
+                        <div class="service-icon">✦</div>
+                        <h3>Immobilienverkauf</h3>
+                        <p>Professionelle Vermarktung und diskrete Abwicklung auf höchstem Niveau.</p>
+                    </a>
+                    <a href="/service/vip.html" class="service-card">
+                        <div class="service-icon">✦</div>
+                        <h3>VIP Erlebnis</h3>
+                        <p>Exklusiver Service für Besichtigungen, von der Flugbuchung bis zum Aufenthalt.</p>
+                    </a>
+                    <a href="/service/after-sales.html" class="service-card">
+                        <div class="service-icon">✦</div>
+                        <h3>After-Sales</h3>
+                        <p>Wir bleiben an Ihrer Seite: Renovierung, Verwaltung und vieles mehr.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MALLORCA GUIDE HUB -->
+        <section class="section bg-light guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mallorca Guide</h2>
+                    <a href="/guide.html" class="link-arrow">Zum Guide &rarr;</a>
+                </div>
+
+                <div class="guide-grid">
+                    <a href="/guide/palma.html" class="guide-card">
+                        <div class="guide-bg"
+                            style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('/Media/Kathedrale.jpg');">
+                        </div>
+                        <div class="guide-content">
+                            <h3>Palma & Umgebung</h3>
+                            <p>Das urbane Herz der Insel.</p>
+                        </div>
+                    </a>
+                    <a href="/guide/suedwesten.html" class="guide-card">
+                        <div class="guide-bg"
+                            style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800');">
+                        </div>
+                        <div class="guide-content">
+                            <h3>Der exklusive Südwesten</h3>
+                            <p>Prominenz, Yachthäfen & Luxus.</p>
+                        </div>
+                    </a>
+                    <a href="/guide/leben.html" class="guide-card">
+                        <div class="guide-bg"
+                            style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=800');">
+                        </div>
+                        <div class="guide-content">
+                            <h3>Leben auf Mallorca</h3>
+                            <p>Schulen, Steuern & Alltag.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELL CTA -->
+        <section class="section sell-cta-section"
+            style="background-color: var(--color-text); color: white; text-align: center;">
+            <div class="container">
+                <h2 class="section-title">Immobilie verkaufen auf Mallorca</h2>
+                <p class="section-text" style="color: #ccc; margin: 0 auto 2rem; max-width: 600px;">
+                    Profitieren Sie von unserem internationalen Netzwerk und unserer Erfahrung im Secret Sale. Wir
+                    bewerten Ihre Immobilie marktgerecht und diskret.
+                </p>
+                <div class="about-actions" style="justify-content: center;">
+                    <a href="/verkaufen.html" class="btn btn-primary"
+                        style="background-color: var(--color-accent); color: white; border: none;">Mehr erfahren</a>
+                    <a href="tel:+34123456789" class="btn btn-secondary hero-btn-secondary">Jetzt anrufen</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <div class="footer__logo"><strong>Finest</strong>Properties</div>
+                <p>Exklusive Immobilien auf Mallorca.</p>
+            </div>
+
+            <div class="footer__links">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Cookie-Richtlinien</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__contact">
+                <h4>Kontakt</h4>
+                <p>Palma de Mallorca, ES</p>
+                <p>+34 123 456 789</p>
+                <p>info@finestproperties.example</p>
+            </div>
+
+            <div class="footer__partner">
+                <h4>Mobilitätspartner</h4>
+                <div class="partner-logo">
+                    <img src="/Media/sixt-car-hire-logo-lg.png" alt="Sixt Autovermietung"
+                        style="height: 28px; width: auto; opacity: 0.9; display: block;">
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <p>&copy; <span id="year"></span> Finest Properties Mallorca. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTION BUBBLE -->
+    <div class="fab-container">
+        <div class="fab-sheet" id="fab-sheet">
+            <button class="fab-sheet-close" id="fab-close">&times;</button>
+            <h3 class="fab-title">Wie können wir helfen?</h3>
+            <a href="tel:+34123456789" class="btn btn-primary fab-action-btn">Jetzt anrufen</a>
+            <a href="https://wa.me/34123456789" class="btn btn-secondary fab-action-btn whatsapp">WhatsApp</a>
+            <div class="fab-small-links">
+                <a href="mailto:info@finestproperties.example">E-Mail</a>
+                <a href="#">Kontaktformular</a>
+            </div>
+        </div>
+        <button class="fab-trigger" id="fab-trigger" aria-label="Contact actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

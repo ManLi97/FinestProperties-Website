@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutz - Finest Properties Mallorca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <!-- STICKY HEADER -->
+    <header class="header scrolled" id="site-header"
+        style="background-color: var(--color-bg); padding: 0.75rem 0; box-shadow: var(--shadow-sm);">
+        <div class="container header__inner">
+            <a href="/" class="header__logo"><img src="/Media/logo-desktop.png" alt="Finest Properties Mallorca"
+                    style="height: 36px; width: auto; display: block;"></a>
+            <nav class="header__nav desktop-only">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Startseite</a></li>
+                    <li class="has-dropdown">
+                        <a href="/immobilien.html" class="nav-link">Immobilien <span class="caret">▼</span></a>
+                    </li>
+                    <li><a href="/verkaufen.html" class="nav-link">Verkaufen</a></li>
+                    <li><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle mobile-only" id="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav"></div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content" style="padding-top: 80px; min-height: 60vh;">
+        <div class="container section" style="max-width: 800px;">
+            <h1 class="page-title">Datenschutz</h1>
+            <p style="color: var(--color-text-light); margin-bottom: 2rem;">Zuletzt aktualisiert: Februar 2026</p>
+
+            <h3 style="margin-bottom: 1rem;">1. Datenschutz auf einen Blick</h3>
+            <p style="color: var(--color-text-light); margin-bottom: 2rem;">Die folgenden Hinweise geben einen einfachen
+                Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+
+            <h3 style="margin-bottom: 1rem;">2. Datenerfassung auf dieser Website</h3>
+            <p style="color: var(--color-text-light); margin-bottom: 2rem;">Wer ist verantwortlich für die
+                Datenerfassung auf dieser Website?<br>Die Datenverarbeitung auf dieser Website erfolgt durch den
+                Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in
+                dieser Datenschutzerklärung entnehmen.</p>
+
+            <p>[Dies ist eine Showcase-Platzhalterseite. Hier stehen normalerweise echte DSGVO-Angaben.]</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__bottom container">
+            <p>&copy; <span id="year"></span> Finest Properties Mallorca. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

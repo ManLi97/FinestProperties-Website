@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum - Finest Properties Mallorca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <!-- STICKY HEADER -->
+    <header class="header scrolled" id="site-header"
+        style="background-color: var(--color-bg); padding: 0.75rem 0; box-shadow: var(--shadow-sm);">
+        <div class="container header__inner">
+            <a href="/" class="header__logo"><img src="/Media/logo-desktop.png" alt="Finest Properties Mallorca"
+                    style="height: 36px; width: auto; display: block;"></a>
+            <nav class="header__nav desktop-only">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Startseite</a></li>
+                    <li class="has-dropdown">
+                        <a href="/immobilien.html" class="nav-link">Immobilien <span class="caret">▼</span></a>
+                    </li>
+                    <li><a href="/verkaufen.html" class="nav-link">Verkaufen</a></li>
+                    <li><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle mobile-only" id="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav"></div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content" style="padding-top: 80px; min-height: 60vh;">
+        <div class="container section" style="max-width: 800px;">
+            <h1 class="page-title">Impressum</h1>
+            <p><strong>Angaben gemäß § 5 TMG</strong></p>
+            <div style="margin: 2rem 0; color: var(--color-text-light);">
+                <p>Finest Properties Mallorca S.L.</p>
+                <p>Paseo Marítimo 12</p>
+                <p>07014 Palma, Illes Balears</p>
+                <p>Spanien</p>
+            </div>
+
+            <p><strong>Vertreten durch:</strong><br>Markus Redlich</p>
+
+            <div style="margin: 2rem 0; color: var(--color-text-light);">
+                <p><strong>Kontakt:</strong></p>
+                <p>Telefon: +34 123 456 789</p>
+                <p>E-Mail: info@finestproperties.example</p>
+            </div>
+
+            <p>[Dies ist eine Showcase-Platzhalterseite. Hier stehen normalerweise echte rechtliche Angaben.]</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__bottom container">
+            <p>&copy; <span id="year"></span> Finest Properties Mallorca. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

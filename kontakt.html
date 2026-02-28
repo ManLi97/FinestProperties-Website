@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt - Finest Properties Mallorca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <!-- STICKY HEADER -->
+    <header class="header scrolled" id="site-header"
+        style="background-color: var(--color-bg); padding: 0.75rem 0; box-shadow: var(--shadow-sm);">
+        <div class="container header__inner">
+            <a href="/" class="header__logo"><img src="/Media/logo-desktop.png" alt="Finest Properties Mallorca"
+                    style="height: 36px; width: auto; display: block;"></a>
+            <nav class="header__nav desktop-only">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Startseite</a></li>
+                    <li class="has-dropdown">
+                        <a href="/immobilien.html" class="nav-link">Immobilien <span class="caret">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Villa & Finca kaufen</a></li>
+                            <li><a href="#">Wohnung kaufen</a></li>
+                            <li><a href="#">Mieten</a></li>
+                            <li><a href="#">Grundstück</a></li>
+                            <li><a href="#">Immobilien Palma de Mallorca</a></li>
+                            <li><a href="#">Gewerbeimmobilien</a></li>
+                            <li><a href="#">Hotels</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/verkaufen.html" class="nav-link">Verkaufen</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="nav-link">Service <span class="caret">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Über uns</a></li>
+                            <li><a href="#">VIP Mallorca Erlebnis</a></li>
+                            <li><a href="#">Leben auf Mallorca</a></li>
+                            <li><a href="#">Mallorca Guide</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/kontakt.html" class="nav-link active">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions desktop-only">
+                <div class="lang-switch">
+                    <span class="active">DE</span> | <span>EN</span> | <span>ES</span>
+                </div>
+            </div>
+            <button class="mobile-toggle mobile-only" id="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav"></div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content" style="padding-top: 80px;">
+
+        <div class="container section">
+            <h1 class="page-title text-center" style="margin-bottom: 3rem;">Kontaktieren Sie uns</h1>
+
+            <div class="detail-layout" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <!-- Left: Contact Form -->
+                <div>
+                    <h2 class="section-title" style="font-size: 1.5rem;">Schreiben Sie uns</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 2rem;">Haben Sie Fragen zu einer Immobilie
+                        oder möchten Sie verkaufen? Wir melden uns umgehend bei Ihnen.</p>
+
+                    <form class="inquiry-form"
+                        style="background: var(--color-card-bg); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Geben Sie Ihren Namen ein" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-Mail</label>
+                            <input type="email" placeholder="Geben Sie Ihre E-Mail ein" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefon</label>
+                            <input type="tel" placeholder="Geben Sie Ihre Telefonnummer ein">
+                        </div>
+                        <div class="form-group">
+                            <label>Ihre Nachricht</label>
+                            <textarea rows="4" placeholder="Wie können wir Ihnen helfen?"></textarea>
+                        </div>
+
+                        <div class="form-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>Ich habe die <a href="/datenschutz.html">Datenschutzerklärung</a> gelesen und
+                                    akzeptiere sie</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100" style="margin-top: 1rem;">Nachricht
+                            senden</button>
+                    </form>
+                </div>
+
+                <!-- Right: Contact Info & Map Placeholder -->
+                <div>
+                    <h2 class="section-title" style="font-size: 1.5rem;">Unsere Büros</h2>
+                    <div style="margin-bottom: 2rem; border-left: 3px solid var(--color-accent); padding-left: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Palma de Mallorca</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">Paseo Marítimo 12<br>07014
+                            Palma, Illes Balears<br>Spanien</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Telefon:</strong> <a href="tel:+34123456789">+34 123
+                                456 789</a></p>
+                        <p><strong>E-Mail:</strong> <a
+                                href="mailto:info@finestproperties.example">info@finestproperties.example</a></p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem; border-left: 3px solid var(--color-border); padding-left: 1rem;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Port d'Andratx</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">Calle Llotja 5<br>07157 Port
+                            d'Andratx, Illes Balears<br>Spanien</p>
+                        <p>Nur nach Terminvereinbarung.</p>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                        alt="Büro"
+                        style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-md); display: block;">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER (same as standard) -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <div class="footer__logo"><strong>Finest</strong>Properties</div>
+                <p>Exklusive Immobilien auf Mallorca.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="/impressum.html">Impressum</a></li>
+                    <li><a href="/datenschutz.html">Datenschutz</a></li>
+                    <li><a href="#">Cookie-Richtlinien</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h4>Kontakt</h4>
+                <p>Palma de Mallorca, ES</p>
+                <p>+34 123 456 789</p>
+                <p>info@finestproperties.example</p>
+            </div>
+            <div class="footer__partner">
+                <h4>Mobilitätspartner</h4>
+                <div class="partner-logo">
+                    <img src="/Media/sixt-car-hire-logo-lg.png" alt="Sixt Autovermietung"
+                        style="height: 28px; width: auto; opacity: 0.9; display: block;">
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <p>&copy; <span id="year"></span> Finest Properties Mallorca. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- FAB -->
+    <div class="fab-container">
+        <button class="fab-trigger" id="fab-trigger" aria-label="Contact actions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+        </button>
+        <div class="fab-sheet" id="fab-sheet">
+            <button class="fab-sheet-close" id="fab-close">&times;</button>
+            <h3 class="fab-title">Wie können wir helfen?</h3>
+            <a href="tel:+34123456789" class="btn btn-primary fab-action-btn">Jetzt anrufen</a>
+            <a href="https://wa.me/34123456789" class="btn btn-secondary fab-action-btn whatsapp">WhatsApp</a>
+            <div class="fab-small-links">
+                <a href="mailto:info@finestproperties.example">E-Mail</a>
+                <a href="/kontakt.html">Kontaktformular</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
