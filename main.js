@@ -1,5 +1,7 @@
 // Entry point for Javascript logic
 import './style.css';
+import heroVideoAuffahrt from '/Media/Auffahrt.mp4';
+import heroVideoDroneFlyover from '/Media/Drone flyover Villa.mp4';
 
 console.log('Finest Properties Mallorca initialized.');
 
@@ -50,6 +52,69 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileNav.classList.toggle('is-open');
             // Prevent scrolling on body when mobile menu is open
             document.body.style.overflow = mobileNav.classList.contains('is-open') ? 'hidden' : '';
+        });
+    }
+
+    // Hero header contract:
+    // - Keep background moving continuously with no blank frame between clips.
+    // - Use two stacked video elements so the next clip can preload off-screen.
+    const heroVideoA = document.getElementById('hero-video-a');
+    const heroVideoB = document.getElementById('hero-video-b');
+    if (heroVideoA && heroVideoB) {
+        const heroVideoPlaylist = [
+            heroVideoAuffahrt,
+            heroVideoDroneFlyover
+        ];
+        const heroVideos = [heroVideoA, heroVideoB];
+        let activeHeroVideoSlot = 0;
+        let currentHeroVideoIndex = 0;
+
+        const safePlay = (videoElement) => {
+            const autoplayPromise = videoElement.play();
+            if (autoplayPromise && typeof autoplayPromise.catch === 'function') {
+                autoplayPromise.catch(() => {
+                    // Silent catch: browsers may block autoplay in edge cases.
+                });
+            }
+        };
+
+        const setVideoSource = (videoElement, src) => {
+            if (videoElement.dataset.src === src) return;
+            videoElement.src = src;
+            videoElement.dataset.src = src;
+            videoElement.load();
+        };
+
+        // Prime both video slots upfront so slot B is ready the moment slot A ends.
+        setVideoSource(heroVideos[0], heroVideoPlaylist[0]);
+        setVideoSource(heroVideos[1], heroVideoPlaylist[1 % heroVideoPlaylist.length]);
+        heroVideos[0].classList.add('is-active');
+        heroVideos[1].classList.remove('is-active');
+        safePlay(heroVideos[0]);
+
+        const swapToNextVideo = (event) => {
+            const endedVideo = event.currentTarget;
+            if (!endedVideo.classList.contains('is-active')) return;
+
+            const nextSlot = (activeHeroVideoSlot + 1) % heroVideos.length;
+            const nextVideo = heroVideos[nextSlot];
+            const currentVideo = heroVideos[activeHeroVideoSlot];
+
+            currentHeroVideoIndex = (currentHeroVideoIndex + 1) % heroVideoPlaylist.length;
+            nextVideo.classList.add('is-active');
+            currentVideo.classList.remove('is-active');
+            safePlay(nextVideo);
+
+            // Recycle the hidden slot by preloading the following clip for gapless handoff.
+            currentVideo.pause();
+            currentVideo.currentTime = 0;
+            const preloadIndex = (currentHeroVideoIndex + 1) % heroVideoPlaylist.length;
+            setVideoSource(currentVideo, heroVideoPlaylist[preloadIndex]);
+            activeHeroVideoSlot = nextSlot;
+        };
+
+        heroVideos.forEach((videoElement) => {
+            videoElement.addEventListener('ended', swapToNextVideo);
         });
     }
 
